@@ -1,2 +1,1 @@
-# Top1000Sites
-Small Script to Generate a List of the Top 1000 Sites from Alexa
+curl -s -O http://s3.amazonaws.com/alexa-static/top-1m.csv.zip ; unzip -q -o top-1m.csv.zip top-1m.csv ; head -1000 top-1m.csv | cut -d, -f2 | cut -d/ -f1 > topsites.txt
